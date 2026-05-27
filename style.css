@@ -1,0 +1,310 @@
+/* =========================
+   GLOBAL STYLING
+========================= */
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Website Body */
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+/* NGO Name */
+
+.logo{
+  font-size: 2.8rem;
+  color: #38bdf8;
+
+  margin-bottom: 15px;
+
+  animation: fadeIn 1s ease;
+}
+
+/* Main Heading */
+
+.main-heading{
+  font-size: 3rem;
+  max-width: 800px;
+
+  line-height: 1.3;
+
+  margin-bottom: 25px;
+
+  animation: slideUp 1.2s ease;
+}
+/* About Section Title */
+
+.about-section h3{
+  font-size: 1.7rem;
+
+  margin-bottom: 15px;
+
+  color: #38bdf8;
+}
+/* About Section */
+
+.about-text{
+  max-width: 750px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  color: #d1d5db;
+
+  margin-bottom: 35px;
+
+  animation: fadeIn 2s ease;
+}
+
+/* Main Image */
+
+.hero-image{
+  width: 90%;
+  max-width: 700px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+  transition: transform 0.4s ease;
+
+  margin-bottom: 35px;
+}
+
+/* Image Hover Effect */
+
+.hero-image:hover{
+  transform: scale(1.03);
+}
+
+/* Button Styling */
+
+button{
+  padding: 15px 35px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #38bdf8;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+
+button:hover{
+  background: #0ea5e9;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  text-align: center;
+
+  padding: 25px;
+
+  color: #cbd5e1;
+
+  font-size: 0.95rem;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp{
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:768px){
+
+  .main-heading{
+    font-size: 2rem;
+  }
+
+  .logo{
+    font-size: 2rem;
+  }
+
+  .about-text{
+    font-size: 1rem;
+  }
+
+}
+
+/* =========================
+   GLASSMORPHISM CARD
+========================= */
+
+.glass-card{
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 25px;
+
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 40px auto;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+
+.theme-btn{
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 1000;
+
+  padding: 12px 18px;
+
+  border-radius: 12px;
+
+  background: white;
+  color: black;
+
+  font-weight: 600;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode{
+  background: linear-gradient(to bottom right, #dbeafe, #f8fafc);
+
+  color: #0f172a;
+}
+
+.light-mode .about-text{
+  color: #334155;
+}
+
+.light-mode footer{
+  color: #1e293b;
+}
+
+/* =========================
+   FLOATING CIRCLES
+========================= */
+
+.circle{
+  position: fixed;
+
+  border-radius: 50%;
+
+  background: rgba(56, 189, 248, 0.15);
+
+  z-index: -1;
+
+  animation: float 8s infinite ease-in-out;
+}
+
+.circle1{
+  width: 200px;
+  height: 200px;
+
+  top: 10%;
+  left: 5%;
+}
+
+.circle2{
+  width: 300px;
+  height: 300px;
+
+  bottom: 10%;
+  right: 10%;
+}
+
+.circle3{
+  width: 150px;
+  height: 150px;
+
+  top: 50%;
+  left: 60%;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+  0%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-20px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+
+}
