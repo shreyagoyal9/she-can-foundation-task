@@ -101,7 +101,9 @@ body{
 /* Image Hover Effect */
 
 .hero-image:hover{
-  transform: scale(1.03);
+  transform: scale(1.03) rotate(1deg);
+
+  box-shadow: 0 12px 35px rgba(56, 189, 248, 0.35);
 }
 
 /* Button Styling */
@@ -307,4 +309,12 @@ footer{
     transform: translateY(0px);
   }
 
+}
+
+/* Glow Effect */
+
+.glass-card:hover{
+  box-shadow: 0 10px 40px rgba(56, 189, 248, 0.25);
+
+  transition: 0.4s ease;
 }
